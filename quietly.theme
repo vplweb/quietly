@@ -1,0 +1,58 @@
+<?php
+use Drupal\views\ViewExecutable;
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter() for form templates.
+ * @param array $suggestions
+ * @param array $variables
+ */
+function quietly_theme_suggestions_block_alter(array &$suggestions, array $variables) {
+  // Block suggestions for custom block bundles.
+  if (isset($variables['elements']['content']['#block_content'])) {
+    array_splice($suggestions, 1, 0, 'block__bundle__' . $variables['elements']['content']['#block_content']->bundle());
+  }
+}
+
+/** 
+ * Add body class based on path alias
+ * https://drupal.stackexchange.com/questions/210376/adding-a-class-to-body
+ */ 
+function quietly_preprocess_html(&$vars) {
+  // Get the current path
+  $current_path = \Drupal::service('path.current')->getPath();
+  $internal = \Drupal::service('path_alias.manager')->getAliasByPath($current_path);
+
+  // Assign it to body class 
+  $vars['attributes']['class'][] = str_replace("/", " ", $internal);
+}
+
+/**  
+ * Work-in-progress! Include JavaScript on specific node 
+ * https://drupal.stackexchange.com/questions/215010/how-do-i-include-javascript-on-a-single-page-in-a-way-that-is-amenable-to-scale
+ */
+
+function quietly_page_attachments_alter(&$page){
+  $path = $current_path = \Drupal::service('path.current')->getPath();
+  if($path == '/dl-search') {
+    $page['#attached']['library'][] = 'js/digital-library.js';
+  }
+}
+
+/**
+ * Make the path to the theme available in every template
+ * Drupal doesn't provide this information to templates by default, instead it assumes that the only time you will need to reference theme assets is from page.html.twig
+ * The Twig variable {{ directory }} only generates a **relative** path fragment
+ * This creates a situation where depending on the template you are in, or if you are in a Drupal instance that is installed in a subfolder (not an expected root level folder)
+ * on a server, you cannot easily access assets that you may need from your theme.
+ * To fix this we need to make the base_path variable available to every template in the theme, then we can use the Twig {{ base_path ~ directory }} variable like normal people in any other good software
+ * https://createdbycocoon.com/knowledge/twig-get-path-theme-directory-and-its-images-assets-drupal-8
+ * (I saw this item offering an alternative, but failed to have this work, and I don't know enough to analyze it or understand how to use it https://iqcode.com/code/other/drupal-8-get-theme-path)
+ */
+function quietly_preprocess(&$variables, $hook) {
+  $variables['base_path'] = base_path();
+}
+
+
+ 
+
+

@@ -1,0 +1,243 @@
+@font-face {
+  font-family: 'vpl-icons';
+  src:  url('fonts/vpl-icons.eot?jevfz9');
+  src:  url('fonts/vpl-icons.eot?jevfz9#iefix') format('embedded-opentype'),
+    url('fonts/vpl-icons.ttf?jevfz9') format('truetype'),
+    url('fonts/vpl-icons.woff?jevfz9') format('woff'),
+    url('fonts/vpl-icons.svg?jevfz9#vpl-icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'vpl-icons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-connect-with-us:before {
+  content: "\31";
+}
+.icon-reopening:before {
+  content: "\32";
+}
+.icon-branch-printers:before {
+  content: "\41";
+}
+.icon-branch-wifi:before {
+  content: "\42";
+}
+.icon-branch-workspace-round:before {
+  content: "\43";
+}
+.icon-email:before {
+  content: "\44";
+}
+.icon-fax:before {
+  content: "\45";
+}
+.icon-phone:before {
+  content: "\48";
+}
+.icon-search-redrawn:before {
+  content: "\49";
+}
+.icon-user-redrawn:before {
+  content: "\4a";
+}
+.icon-webside-redrawn:before {
+  content: "\4b";
+}
+.icon-inspiration-lab:before {
+  content: "\4c";
+}
+.icon-book-computer:before {
+  content: "\4d";
+}
+.icon-renew-items:before {
+  content: "\4e";
+}
+.icon-library-card:before {
+  content: "\4f";
+}
+.icon-accessibility:before {
+  content: "\61";
+}
+.icon-arrow-down:before {
+  content: "\62";
+}
+.icon-arrow-left:before {
+  content: "\63";
+}
+.icon-arrow-right:before {
+  content: "\64";
+}
+.icon-arrow-up:before {
+  content: "\65";
+}
+.icon-close:before {
+  content: "\66";
+}
+.icon-download:before {
+  content: "\67";
+}
+.icon-location-redrawn:before {
+  content: "\68";
+}
+.icon-logo-facebook:before {
+  content: "\6a";
+}
+.icon-logo-flickr:before {
+  content: "\6b";
+}
+.icon-logo-instagram:before {
+  content: "\6c";
+}
+.icon-logo-pinterest:before {
+  content: "\6d";
+}
+.icon-logo-tumblr:before {
+  content: "\6e";
+}
+.icon-logo-twitter:before {
+  content: "\6f";
+}
+.icon-logo-youtube:before {
+  content: "\70";
+}
+.icon-menu:before {
+  content: "\71";
+}
+.icon-minus:before {
+  content: "\72";
+}
+.icon-more-arrow-right:before {
+  content: "\73";
+}
+.icon-new-window:before {
+  content: "\74";
+}
+.icon-plus:before {
+  content: "\75";
+}
+.icon-time-redrawn:before {
+  content: "\76";
+}
+.icon-upload:before {
+  content: "\77";
+}
+.icon-branch-computer-redrawn:before {
+  content: "\79";
+}
+.icon-branch-meeting-rooms:before {
+  content: "\7a";
+}
+.icon-chat:before {
+  content: "\e900";
+}
+.icon-due-dates:before {
+  content: "\e901";
+}
+.icon-fines:before {
+  content: "\e902";
+}
+.icon-holds:before {
+  content: "\e903";
+}
+.icon-new-titles:before {
+  content: "\e904";
+}
+.icon-spaces:before {
+  content: "\e905";
+}
+.icon-branch-meeting-rooms-redrawn:before {
+  content: "\e906";
+}
+.icon-unique-collections:before {
+  content: "\e907";
+}
+.icon-filters:before {
+  content: "\e908";
+}
+.icon-coronavirus:before {
+  content: "\e909";
+}
+.icon-announcement:before {
+  content: "\e90a";
+}
+.icon-ebooks:before {
+  content: "\e90c";
+}
+.icon-job-search-resources:before {
+  content: "\e90d";
+}
+.icon-industry-profiles:before {
+  content: "\e90e";
+}
+.icon-employment-guides:before {
+  content: "\e90f";
+}
+.icon-alternative-careers:before {
+  content: "\e910";
+}
+.icon-small-business:before {
+  content: "\e911";
+}
+.icon-chinese-speakers:before {
+  content: "\e912";
+}
+.icon-audiobooks:before {
+  content: "\e913";
+}
+.icon-kids:before {
+  content: "\e914";
+}
+.icon-streaming-video:before {
+  content: "\e915";
+}
+.icon-teens:before {
+  content: "\e916";
+}
+.icon-tourism-travel:before {
+  content: "\e90b";
+}
+.icon-arts-communication:before {
+  content: "\e917";
+}
+.icon-construction:before {
+  content: "\e91a";
+}
+.icon-education:before {
+  content: "\e91b";
+}
+.icon-engineering:before {
+  content: "\e91c";
+}
+.icon-food-preparation-service:before {
+  content: "\e91d";
+}
+.icon-healthcare:before {
+  content: "\e91e";
+}
+.icon-office-administration:before {
+  content: "\e91f";
+}
+.icon-operation-maintenance:before {
+  content: "\e920";
+}
+.icon-personal-care:before {
+  content: "\e921";
+}
+.icon-science-technology:before {
+  content: "\e922";
+}

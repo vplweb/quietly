@@ -1,0 +1,105 @@
+/* No Media Queries for these: they are universal regardless of media characteristics */
+html {
+  width: 100%;
+  /* Set height always larger than viewport height to force scrollbars to display in browsers that turn them on and off; this prevents "jumping because scrollbars will always be on */
+  height: calc(100% + 1px);
+}
+
+body::before {
+  position: fixed;
+  display: block;
+  width: 100%;
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  font-weight: bold;
+  content: "This is Quietly";
+  text-align: center;
+  z-index: 9999;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: sans-serif;
+  /* Set <body> to be a flex layout a single column. This will make it ALWAYS occupy the full height of the viewport, so the footer will always stick to the bottom of the viewport frame */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Set the main semantic sections of the page inside the body */
+/* Each semantic section should stretch to occupy the vertical space of the viewport */
+/* Each semantic section should also get no smaller than its contents and whatever height that totals */
+/* Drupal guide says these ' Base rules should never include class selectors.' (https://www.drupal.org/node/1887918#separate-concerns)  */
+  header {
+    background-color: #ffffff; 
+    flex: 0 1 auto;
+    /* The <header> element displays its content in a grid of 14 columns */
+    display: grid;
+    grid-template-columns: repeat(14, 1fr);
+    gap: calc(var(--gap-unit) / 2);
+  }
+
+main {
+  background-color: #ffffff; 
+  flex: 1 1 auto;
+
+  margin-top: var(--gap-unit);
+  /* The <main> element displays its content in a grid of 14 columns */
+  display: grid;
+  grid-template-columns: repeat(14, 1fr);
+
+  gap: calc(var(--gap-unit) / 2);
+}
+
+main > * {
+  grid-column-start: 2;
+}
+
+footer {
+  background-color: #ffffff;
+  flex: 0 1 auto;
+  margin-top: var(--gap-unit);
+  /* The <footer> element displays its content in a grid of 14 columns */
+  display: grid;
+  grid-template-columns: repeat(14, 1fr);
+  column-gap: calc(var(--gap-unit) / 2);
+  row-gap: 0;
+}
+
+@media screen and (min-width: 57rem) {
+  header {
+    background-color: #ffffff;
+    flex: 0 1 auto;
+    /* The <header> element displays its content in a grid of 14 columns */
+    display: grid;
+    grid-template-columns: repeat(14, 1fr);
+    gap: var(--gap-unit);
+  }
+
+  main {
+    background-color: #ffffff;
+    flex: 1 1 auto;
+    margin-top: var(--gap-unit);
+    /* The <main> element displays its content in a grid of 14 columns */
+    display: grid;
+    grid-template-columns: repeat(14, 1fr);
+    gap: var(--gap-unit);
+  }
+
+  main > * {
+    grid-column-start: 2;
+  }
+
+  footer {
+    background-color: #ffffff;
+    flex: 0 1 auto;
+    margin-top: var(--gap-unit);
+    /* The <footer> element displays its content in a grid of 14 columns */
+    display: grid;
+    grid-template-columns: repeat(14, 1fr);
+    column-gap: var(--gap-unit);
+    row-gap: 0;
+  }
+}

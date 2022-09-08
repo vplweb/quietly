@@ -1,0 +1,57 @@
+/* Select an element whose id contains "events" */
+div[id*="events"] {
+  grid-column: 1 / -1;
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--gap-unit);
+
+  background-color: var(--very-light-grey);
+}
+
+h2 {
+  margin: 0;
+  grid-row-start: 1;
+  grid-column: 1 / 4;
+}
+
+div[id*="events"] .contextual-region {
+  grid-column: 1 / -1;
+  grid-row-start: 1;
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--gap-unit);
+}
+
+div[id*="events"] .contextual-region .views-row {
+  grid-row-start: 2;
+  grid-column: span 3;
+}
+
+div[id*="events"] .contextual-region .view__footer {
+  grid-row-start: 1;
+  grid-column: 4 / span 9;
+}
+
+div[id*="events"] .contextual-region .view__footer div:first-child {
+  display: grid;
+  grid-template-columns: repeat(18, 1fr);
+  gap: var(--gap-unit);
+}
+
+div[id*="events"] .contextual-region .view__footer div:first-child form {
+  grid-column: 1 / -1;
+}
+
+div[id*="events"] .contextual-region .view__footer div:first-child .views-row:nth-child(odd) {
+  grid-column: 1 / span 9;
+
+  background-color: white;
+}
+
+div[id*="events"] .contextual-region .view__footer div:first-child .views-row:nth-child(even) {
+  grid-column: 10 / span 9;
+
+  background-color: white;
+}

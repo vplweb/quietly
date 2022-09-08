@@ -1,0 +1,104 @@
+/* Sitewide Alerts */
+.alert__body {
+  grid-column: 1 / -1;
+  aspect-ratio: 12 / 0.33333;
+
+  display: grid;
+  grid-template-columns: repeat(14, 1fr);
+  gap: var(--gap-unit);
+
+  align-items: center;
+
+  border-bottom: 2px solid white;
+}
+
+@media screen and (min-width: 57rem) {
+  .alert__body {
+    grid-column: 1 / -1;
+    aspect-ratio: 12 / 0.33333;
+
+    display: grid;
+    grid-template-columns: repeat(14, 1fr);
+    gap: var(--gap-unit);
+
+    align-items: center;
+
+    border-bottom: 2px solid white;
+  }
+}
+
+.alert__body p {
+  grid-column: 2 / 13;
+  margin: 0;
+}
+
+.alert__body p::before {
+  display: inline-block;
+  margin-right: 0.25rem;
+  padding: 0.25rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--dark-grey);
+  background-color: rgba(0,0,0,0.1);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 700;
+  text-align: center;
+  border-radius: 10rem;
+}
+
+.alert__body.Warning {
+  background-color: var(--warning);
+}
+
+.alert__body.Warning p::before {
+  content: '!';
+}
+
+.alert__body.Information {
+  background-color: var(--information);
+}
+
+.alert__body.Information p::before {
+   content: 'i';
+}
+
+.alert__body.Emergency {
+  background-color: var(--emergency);
+}
+
+.alert__body.Emergency p::before {
+  content: '!';
+}
+
+.alert__body.Emergency .close {
+  display: none;
+}
+
+span.close {
+  z-index: 99;
+  color: var(--dark-grey);
+  font-size: 2rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Service Alerts */
+#block-views-block-alerts-block-2 .views-row {
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--light-grey);
+}
+
+#block-views-block-alerts-block-2 .views-row:last-of-type {
+  border: none;
+}
+
+/* Show & Hide */
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}

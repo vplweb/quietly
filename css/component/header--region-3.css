@@ -1,0 +1,9 @@
+.region--header__region-3 {
+  grid-column: 8 / 9;
+}
+
+@media screen and (min-width: 57rem) {
+  .region--header__region-3 {
+    grid-column: 8 / 14;
+  }
+}

@@ -1,0 +1,120 @@
+/* Select an element whose id contains "spotlight" */
+div[id*="spotlight"] {
+  grid-column: 1 / -1;
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--gap-unit);
+}
+
+/* Select an element whose class contains "spotlight"– this is the element inside the element… */
+div[class*="spotlight"] {
+  grid-column: 1 / -1;
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--gap-unit);
+
+  padding: var(--gap-unit);
+  background-color: #ddd;
+}
+
+/* Select the form whose name contains the string "spotlight" */
+form[id*="spotlight"] {
+  grid-column: 7 / span 6;
+  aspect-ratio: 6 / 0.5;
+
+  display: flex;
+  gap: var(--gap-unit);
+  justify-content: flex-start;
+  align-items: center;
+
+  background-color: pink;
+}
+
+/* style the pull-down */
+#edit-type {
+  padding: 0.5em;
+
+  appearance: none;
+  border: 1px solid #eeeeee;
+  border-radius: 0;
+}
+
+/* Select spotlight items WHEN NOT LOGGED IN */
+div[class*="spotlight"] div.views-row:nth-child(even) {
+  grid-column: 1 / span 6;
+  
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: var(--gap-unit);
+  grid-auto-rows: calc(var(--row-height) * 0.5);
+  
+  background-color: #cdcdcd;
+}
+
+/* Select spotlight items WHEN NOT LOGGED IN */
+div[class*="spotlight"] div.views-row:nth-child(odd) {
+  grid-column: 7 / span 6;
+  
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: var(--gap-unit);
+  grid-auto-rows: calc(var(--row-height) * 0.5);
+
+  /* background-color: lightgreen; */
+}
+
+/* Select spotlight items WHEN LOGGED IN */
+body[class*="toolbar"] div[class*="spotlight"] div.views-row:nth-child(odd) {
+  grid-column: 1 / span 6;
+  
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: var(--gap-unit);
+  grid-auto-rows: calc(var(--row-height) * 0.5);
+  
+  background-color: #cdcdcd;
+}
+
+/* Select spotlight items WHEN LOGGED IN */
+body[class*="toolbar"] div[class*="spotlight"] div.views-row:nth-child(even) {
+  grid-column: 7 / span 6;
+  
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: var(--gap-unit);
+  grid-auto-rows: calc(var(--row-height) * 0.5);
+
+  /* background-color: lightgreen; */
+}
+
+/* Set the spotlight item image */
+div[class*="spotlight"] div.views-row .views-field-field-image {
+  grid-column: span 2;
+  grid-row: span 3;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  overflow: hidden;
+  background-color: orange;
+}
+
+/* override the max-width on img in this case */
+div[class*="spotlight"] div.views-row .views-field-field-image img {
+  max-width: 115%;
+}
+/* Set the spotlight item heading */
+div[class*="spotlight"] div.views-row .views-field-title {
+  margin: 0;
+  grid-column: span 3;
+  grid-row: span 1;
+}
+
+/* set the spotlight item body */
+div[class*="spotlight"] div.views-row .views-field-body {
+  grid-column: 3 / span 4;
+  grid-row: span 2;
+}

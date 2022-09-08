@@ -1,0 +1,12 @@
+/* Icon Font */
+@font-face {
+  font-family: 'vpl-icons';
+  src:  url("/sites/nllama/themes/quietly/fonts/vpl-icons.eot");
+  src:  url("/sites/nllama/themes/quietly/fonts/vpl-icons.eot") format("embedded-opentype"),
+    url("/sites/nllama/themes/quietly/fonts/vpl-icons.ttf") format("truetype"),
+    url("/sites/nllama/themes/quietly/fonts/vpl-icons.woff") format("woff"),
+    url("/sites/nllama/themes/quietly/fonts/vpl-icons.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}

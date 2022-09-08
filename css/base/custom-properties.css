@@ -1,0 +1,71 @@
+:root {
+/* Layout settings */
+  --gap-unit: 1rem;
+  --layout-unit: calc(100vw / 14 + 0rem);
+  --row-height: calc(var(--layout-unit) - var(--gap-unit));
+
+  /* Set base font size */
+  font-size: 18px;
+
+  /* Set line-height to 1.5 for accessibility https://www.w3.org/TR/WCAG21/#visual-presentation */
+  line-height: 1.5;
+
+/* Grey Series */
+  /* Use CSS color keywords for black (which wasn't black anyway) and white, no need to have custom properties so why bother repeating it? */
+  /* Change names to be phrases we actually use and can reason with */
+  /* BLACK: Use color keyword "black" */
+  --very-dark-grey: rgb(34,34,34);
+  --dark-grey: rgb(68,68,68);
+  --grey: rgb(102,102,102);
+  --light-grey: rgb(204,204,204);
+  --very-light-grey: rgb(238,238,238);
+  --pale-grey: rgb(248,248,248);
+  /* WHITE: Use color keyword "white" */
+
+/* VPL Brand Identity – primary colours (source: VPL GSM 2020 ) */
+  /* Rename; prefix with "vpl-" to indicate primary brand colour */
+  --vpl-blue: rgb(48,127,226);
+  --vpl-red: rgb(249,56,34);
+  --vpl-yellow:	rgb(255,182,0);
+
+/* VPL Brand Identity – secondary colours (source: VPL GSM 2020 ) */
+  /* Rename; prefix with "secondary--" to indicate secondary brand colour */
+  --secondary--dark-blue: rgb(0,71,187);
+  --secondary--light-blue: rgb(123,164,219);
+
+  --secondary--dark-red: rgb(203,51,59);
+  --secondary--light-red: rgb(255,88,93);
+
+  --secondary--dark-yellow: rgb(255,143,28);
+  --secondary--light-yellow: rgb(255,181,73);
+
+/* VPL Brand Identity – accent colours (source: VPL GSM 2020 ) */
+  /* Rename; prefix with "accent--" to indicate accent brand colour */
+  --accent--seafoam: rgb(113,219,212);
+  --accent--straw: rgb(250,224,83);
+  --accent--violet: rgb(68,0,153);
+
+/* Utility colours */
+  --information: rgb(173,221,162);
+  --emergency:  rgb(246,141,150);
+  --warning: rgb(254,219,147);
+
+/* Reading Lights colours */
+--reading-lights--beige: rgb(244, 239, 232);
+--reading-lights--red: rgb(219, 46, 43);
+--reading-lights--gold: rgb(169, 148, 50);
+
+/* Literary Landmarks colours */
+--literary-landmarks--green: rgb(56, 166, 72);
+--literary-landmarks--dark-green: rgb(25, 132, 65);
+
+/* Typography sizes */
+/* Type Scale, Minor Third: https://type-scale.com */
+  --h1: 2.488rem;
+  --h2: 2.074rem;
+  --h3: 1.728rem;
+  --h4: 1.44rem;
+  --h5: 1.2rem;
+  --p: 1rem;
+  --small: 0.694rem;
+}

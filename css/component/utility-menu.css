@@ -1,0 +1,101 @@
+.nav__utility-menu {
+  display: none;
+}
+
+.toggles-menu {
+  display: flex;
+}
+
+@media screen and (min-width: 71rem) {
+  .toggles-menu {
+    display: none;
+  }
+
+  .nav__utility-menu {
+    grid-column: 1 / -1;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .utility-menu {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    height: 100%;
+    
+    list-style-type: none;
+    margin: 0;
+  }
+
+  .utility-menu .menu-item {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+  }
+
+  .utility-menu .sub-menu {
+    display: none;
+  }
+
+  /* Translate Menu; this is a special case, the label is not a link but text in a <span> used to trigger the menu */
+  .translate:hover,
+  .translate:focus {
+    cursor: pointer;
+  }
+
+  /* The menu itself is a child of the <li> element, not the triggering <span> so we select on the <li> element and its child <ul> */
+  .utility-menu > li:nth-of-type(2) > .sub-menu {
+    display: none;
+    position: absolute;
+    margin-top: -0.25rem;
+    margin-left: -2.5rem;
+    padding: 1rem;
+    background-color: white;
+    z-index: 999;
+    border: 1px solid rgba(0,0,0,0.1);
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+  }
+
+  /* Next we style the links in the submenu */
+  .nav__utility-menu > ul > li:nth-of-type(2) ul > li > a {
+    color: var(--dark-grey);
+    font-size: var(--small);
+  }
+
+  /* The very last link is the "About Translation" link (set its position in Drupal Admin > Structure > Menus > Utility Menu, drag to correct placement in the order */
+  .utility-menu > li:nth-of-type(2) > .sub-menu > li:last-of-type > a {
+    display: block;
+    width: 100%;
+    clear: both;
+    margin-top: 0.5rem;
+    padding: 0.4rem 1rem;
+    background-color: var(--vpl-blue);
+    color: white;
+    text-align: center;
+  }
+}
+/* SOCIAL MEDIA ICONS see css/theme/social-media-icons.css */
+
+/* Login */
+/* Add this class in Admin > Structure > Menus > Utility Menu > Log In / My VPL > Attributes > Class */
+.log-in--my-vpl {
+	color: white;
+	padding: 3px 16px;
+	border: 2px solid var(--vpl-red);
+	background-color: var(--vpl-red);
+	font-weight: bold;
+	font-size: 0.9rem;
+}
+
+.log-in--my-vpl:visited {
+	color: white;
+}
+
+.log-in--my-vpl:hover {
+	color: white;
+  border: 2px solid var(--secondary--dark-red);
+  background-color: var(--secondary--dark-red);
+}

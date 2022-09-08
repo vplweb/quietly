@@ -1,0 +1,6 @@
+/* Switch <img> tags from inline-block to block layout to fill trailing baseline offset and set images to default to a responsive behaviour as a safety-net */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}

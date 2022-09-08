@@ -1,0 +1,34 @@
+.nav__main-menu {
+  display: none;
+}
+@media screen and (min-width: 71rem) {
+  .nav__main-menu {
+    grid-column: 1 / -1;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .main-menu {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    gap: calc(4 * var(--gap-unit));
+    
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .main-menu > .menu-item {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+  }
+
+  .main-menu > .menu-item > .sub-menu {
+    display: none;
+  }
+}

@@ -1,0 +1,21 @@
+quietly.small:
+  label: small
+  mediaQuery: ''
+  weight: 0
+  multipliers:
+    - 1x
+    - 2x
+quietly.medium:
+  label: medium
+  mediaQuery: 'all and (min-width: 57rem) and (max-width: 70rem)'
+  weight: 1
+  multipliers:
+    - 1x
+    - 2x
+quietly.wide:
+  label: wide
+  mediaQuery: 'all and (min-width: 71rem)'
+  weight: 2
+  multipliers:
+    - 1x
+    - 2x

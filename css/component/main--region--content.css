@@ -1,0 +1,11 @@
+.region--content {
+  grid-column: 1 / -1;
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--gap-unit);
+}
+
+.region--content > * {
+  grid-column: 1 / -1;
+}

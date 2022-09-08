@@ -1,0 +1,19 @@
+.link-callout-block {
+  margin-bottom: var(--gap-unit);
+  padding: var(--gap-unit);
+  background-color: var(--dark-grey);
+  color: white;
+}
+
+.link-callout-block a,
+.link-callout-block a:active,
+.link-callout-block a:hover,
+.link-callout-block a:visited {
+  display: inline-block;
+  margin-top: var(--gap-unit);
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+}

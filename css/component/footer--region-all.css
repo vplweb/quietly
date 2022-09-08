@@ -1,0 +1,10 @@
+.region--footer__region-1,
+.region--footer__region-2,
+.region--footer__region-3 {
+  padding: calc(var(--gap-unit) * 3) 0;
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: repeat(14, 1fr);
+  column-gap: var(--gap-unit);
+}
+

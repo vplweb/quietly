@@ -1,0 +1,7 @@
+*.log
+debug.log
+debug.log*
+/debug.log
+/debug.log*
+quietly.code-workspace
+.vscode/settings.json

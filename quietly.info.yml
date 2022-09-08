@@ -1,0 +1,28 @@
+# Welcome to YAML. Indentation counts but line spaces don't. Comments are preceded by a '# ' and are not parsed
+# The theme name as it will be displayed in Admin UI. REQUIRED
+name: quietly
+# textual description of the theme that will be displayed in Admin UI. Optional
+description: Drupal Experimental Theme version 8 using Stable 9 base theme
+# The kind of thing this is module or theme (which is a special kind of module) REQUIRED(?)
+type: theme
+
+base theme: stable9
+
+core_version_requirement: ^9
+libraries:
+  - 'quietly/global-everything'
+regions:
+    # Region names cannot have hyphens; probably something to do with PHP?
+    header__region_1: 'Header Region 1 (Alerts)'
+    header__region_2: 'Header Region 2 (Logo)'
+    header__region_3: 'Header Region 3 (Secondary/Utility menu)'
+    header__region_4: 'Header Region 4 (Main Menu)'
+    header__region_5: 'Header Region 5 (Search)'
+    main__aside_a: 'Main Aside A'
+    main__aside_b: 'Main Aside B'
+    content: 'Main Region 1 (Content Region)'
+    main__region_2: 'Main Region 2'
+    main__region_3: 'Main Region 3'
+    footer__region_1: 'Footer Region 1'
+    footer__region_2: 'Footer Region 2'
+    footer__region_3: 'Footer Region 3'

@@ -1,0 +1,55 @@
+/* Social Media Icons */
+/*
+    Make text invisible – without using "display: none;" property
+    This makes styling easier as we don't have to contend with elements or pseudo elements (::before, ::after) being visible or not
+*/
+.facebook,
+.twitter,
+.instagram,
+.youtube {
+  font-size: 0px;
+  color: transparent;
+  border: none;
+}
+
+/* Set up for inserting the icons */
+.facebook::before,
+.twitter::before,
+.instagram::before,
+.youtube::before {
+
+  color: black;
+  font-family: "vpl-icons" !important;
+  font-size: 1rem;
+  border: 2px solid black;
+  padding: 6px;
+}
+
+/* Assign icons to each link */
+.facebook::before {
+  content: '\6a';
+}
+
+.twitter::before {
+  content: '\6f';
+}
+
+.instagram::before {
+  content: '\6c';
+}
+
+.youtube::before {
+  content: '\70';
+}
+
+/* Change the colour of these icons for display in the pre-footer-menu */
+.pre-footer-menu .facebook::before,
+.pre-footer-menu .twitter::before,
+.pre-footer-menu .instagram::before,
+.pre-footer-menu .youtube::before {
+  display: inline-block;
+  color: var(--grey);
+  border-color: var(--grey);
+  padding: 0.25rem 0.5rem;
+  margin: 0.1rem 0.5rem 0 0;
+}

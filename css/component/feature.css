@@ -1,0 +1,163 @@
+/* this will change with new HTML*/
+
+
+/* Select an element whose id contains "features" */
+div[id*="features"] {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--gap-unit);
+}
+
+/* Select an element whose class contains "feature" */
+div[class*="feature"] {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: var(--row-height);
+  gap: var(--gap-unit);
+  background-color: lightblue;
+}
+
+/* Select a .views-row inside an element whose class contains "feature" */
+div[class*="feature"] .views-row {
+  grid-column: 1 / -1;
+  grid-row: span 3;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: var(--row-height);
+  gap: var(--gap-unit);
+  /* The frame of this element will trim inner boxes that overflow */
+  overflow: hidden;
+}
+
+div[class*="feature"] .views-row img {
+  grid-column: span 6;
+  grid-row: span 3;
+}
+
+div[class*="feature"] .views-row h1 {
+  grid-column: 7 / span 6;
+  grid-row: span 1;
+  font-size: var(--h2);
+}
+
+div[class*="feature"] .views-row p {
+  grid-column: 7 / span 6;
+  grid-row: span 2;
+}
+
+/* In main regions 2 and 3 the features HTML is a little different, We repeat ourselves here for CLARITY */
+/* -------------------- .region--main__region-2 feature stuff --------------------- */
+.region--main__region-2 div[class*="feature"] .views-row {
+  grid-column: 1 / -1;
+  grid-row: span 3;
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: var(--row-height);
+  gap: var(--gap-unit);
+
+  /* The frame of this element will trim inner boxes that overflow */
+  overflow: hidden;
+}
+
+.region--main__region-2 div[class*="feature"] .views-row {
+  grid-column: 1 / -1;
+  grid-row: span 3;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: var(--row-height);
+  gap: var(--gap-unit);
+  /* The frame of this element will trim inner boxes that overflow */
+  overflow: hidden;
+}
+
+.region--main__region-2 div[class*="feature"] .views-row .feature__image {
+  grid-column: span 6;
+  grid-row: span 3;
+
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: var(--row-height);
+  gap: var(--gap-unit);
+}
+
+.region--main__region-2 div[class*="feature"] .views-row .feature__image a {
+  grid-column: 1 / -1;
+  grid-row: span 3;
+}
+
+.region--main__region-2 div[class*="feature"] .views-row .feature__title {
+  margin: 0;
+  grid-column: 7 / span 6;
+  grid-row: span 1;
+}
+
+.region--main__region-2 div[class*="feature"] .views-row .feature__body {
+  grid-column: 7 / span 6;
+  grid-row: span 2;
+}
+
+.region--main__region-2 div[class*="feature"] .views-row .feature__body p {
+  grid-column: 1 / -1;
+  grid-row: span 2;
+}
+
+/* -------------------- .region--main__region-3 feature stuff --------------------- */
+.region--main__region-3 div[class*="feature"] .views-row {
+  grid-column: 1 / -1;
+  grid-row: span 3;
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: var(--row-height);
+  gap: var(--gap-unit);
+
+  /* The frame of this element will trim inner boxes that overflow */
+  overflow: hidden;
+}
+
+.region--main__region-3 div[class*="feature"] .views-row {
+  grid-column: 1 / -1;
+  grid-row: span 3;
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: var(--row-height);
+  gap: var(--gap-unit);
+  /* The frame of this element will trim inner boxes that overflow */
+  overflow: hidden;
+}
+
+.region--main__region-3 div[class*="feature"] .views-row .feature__image {
+  grid-column: span 6;
+  grid-row: span 3;
+
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: var(--row-height);
+  gap: var(--gap-unit);
+}
+
+.region--main__region-3 div[class*="feature"] .views-row .feature__image a {
+  grid-column: 1 / -1;
+  grid-row: span 3;
+}
+
+.region--main__region-3 div[class*="feature"] .views-row .feature__title {
+  margin: 0;
+
+  grid-column: 7 / span 6;
+  grid-row: span 1;
+}
+
+.region--main__region-3 div[class*="feature"] .views-row .feature__body {
+  grid-column: 7 / span 6;
+  grid-row: span 2;
+}
+
+.region--main__region-3 div[class*="feature"] .views-row .feature__body p {
+  grid-column: 1 / -1;
+  grid-row: span 2;
+}

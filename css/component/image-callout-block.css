@@ -1,0 +1,18 @@
+.image-callout-block {
+  margin-bottom: var(--gap-unit);
+}
+
+.image-callout-block .content {
+  padding: calc(var(--gap-unit) * 2);
+  background-color: var(--light-grey);
+}
+
+/* Button */
+.image-callout-block div:last-of-type a {
+  display: inline-block;
+   margin-top: var(--gap-unit);
+  padding: calc(var(--gap-unit) * 0.5) calc(var(--gap-unit) * 2);
+  background-color: var(--vpl-blue);
+  color: white;
+  text-decoration: none;
+}

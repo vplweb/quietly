@@ -1,0 +1,62 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a menu.
+ *
+ * Available variables:
+ * - menu_name: The machine name of the menu.
+ * - items: A nested list of menu items. Each menu item contains:
+ *   - attributes: HTML attributes for the menu item.
+ *   - below: The menu item child items.
+ *   - title: The menu link title.
+ *   - url: The menu link url, instance of \Drupal\Core\Url
+ *   - localized_options: Menu link localized options.
+ *   - is_expanded: TRUE if the link has visible children within the current
+ *     menu tree.
+ *   - is_collapsed: TRUE if the link has children within the current menu tree
+ *     that are not currently visible.
+ *   - in_active_trail: TRUE if the link is in the active trail.
+ *
+ * @ingroup themeable
+ */
+#}
+{% import _self as menus %}
+{#
+  We call a macro which calls itself to render the full tree.
+  @see https://twig.symfony.com/doc/1.x/tags/macro.html
+#}
+
+{# Attempt to add classes to the menus using method described here https://key2goal.com/article/drupal-8-add-custom-menu-classes-using-menuhtmltwig #}
+{# Need to pass in the menu_name variable to this scope here because the notes above don't explain it isn't available unless explicitly passed in; of course we all know this… #}
+{# {{ menus.menu_links(items, attributes, 0) }} #}
+{{ menus.menu_links(items, attributes, 0, menu_name) }}{# THIS WORKS! #}
+{# Also need to to pass in the menu_name variable to this macro/scope here because the notes above don't explain it isn't available unless explicitly passed in; of course we all know this… #}
+{# {% macro menu_links(items, attributes, menu_level) %} #}
+{% macro menu_links(items, attributes, menu_level, menu_name) %}{# THIS WORKS! #}
+  {% import _self as menus %}
+  {# Add menu class rigamarole here; if the menu_name doesn't contain the word 'memu' add "-menu" to it, otherwise leave it alone #}
+  {% if 'menu' not in menu_name %}
+    {% set menu_name = menu_name|clean_class ~ '-menu' %}
+  {% endif %} 
+  {# End menu class rigamarole #}
+  {% if items %}
+    {% if menu_level == 0 %}
+      {# Change the construction of the output here #}
+      {# <ul{{ attributes }}> #}
+      {{ attributes }}
+        <ul{{ attributes.addClass(menu_name) }}> 
+    {% else %}
+      <ul{{ attributes|without('class').addClass('sub-menu') }}>
+    {% endif %}
+    {% for item in items %}
+      {# <li{{ item.attributes }}> #}
+      <li{{ item.attributes.addClass('menu-item') }}>
+        {{ link(item.title, item.url) }}
+        {% if item.below %}
+          {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+        {% endif %}
+      </li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endmacro %}

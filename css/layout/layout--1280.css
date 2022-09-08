@@ -1,0 +1,122 @@
+/* Layout the regions in the <header> element */
+/* These styles pertain to boxes that are used solely for structuring the page */
+/* <header> element and layout children */
+@media screen and (min-width: 71rem) {
+    .region--header__region-1 {
+        grid-column: 1 / -1;
+    }
+
+    .header__region-2 {
+        grid-column: 2 / 7;
+
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: var(--gap-unit);
+        align-items: center;
+    }
+
+    .region--header__region-3 {
+        grid-column: 7 / 14;
+    }
+
+    .region--header__region-4 {
+        grid-column: 2 / 14;
+    }
+
+    .header__region-5 {
+        grid-column: 1 / -1;
+        border-top: 1px solid grey;
+
+        display: grid;
+        grid-template-columns: repeat(14, 1fr);
+        gap: var(--gap-unit);
+    }
+
+    /* <main> element and layout children */
+
+    .main-layout {
+        grid-column: 2 / 14;
+        background-color: cornflowerblue;
+
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        gap: var(--gap-unit);
+    }
+
+    .main__aside-a {
+        grid-column: 2 / 4;
+        background-color: coral;
+
+        height: min-content;
+    }
+
+    .main__aside-b {
+        grid-column: 12 / 14;
+        background-color: pink;
+    }
+
+    /* Region position & widths: aside-a; If the aside-a exists this will select the regions that follow in the HTML and position/size them */
+    .main__aside-a ~ .main-layout {
+        grid-column: 4 / 14;
+        background-color: cornflowerblue;
+
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        gap: var(--gap-unit);
+    }
+
+    /* Region position & widths: aside-b; If the aside-b exists this will select the regions that follow in the HTML and position/size them */
+    .main__aside-b ~ .main-layout {
+        grid-column: 2 / 12;
+        background-color: cornflowerblue;
+
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        gap: var(--gap-unit);
+    }
+
+    /* Region position & widths: aside-a AND aside-a; If the aside-a and aside-b both exist this will select the regions that follow in the HTML and position/size them */
+    .main__aside-a + .main__aside-b ~ .main-layout {
+        grid-column: 4 / 12;
+        background-color: cornflowerblue;
+        
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: var(--gap-unit);
+    }
+
+    /* <footer> element and layout children */
+    .footer__region-1 {
+        grid-column: 1 / -1;
+        background-color: var(--light-grey);
+        /* The .footer__region-1 element displays its content in a grid of 12 columns as well */
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 1em;
+    }
+
+    .footer__region-2 {
+        grid-column: 1 / -1;
+        background-color: var(--dark-grey);
+        /* The .footer__region-1 element displays its content in a grid of 12 columns as well */
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 1em;
+    }
+
+    .footer__region-3 {
+        grid-column: 1 / -1;
+        background-color: var(--very-dark-grey);
+        color: var(--grey);
+        /* The .footer__region-1 element displays its content in a grid of 12 columns as well */
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 1em;
+    }
+    
+    .footer__region-1--content,
+    .footer__region-2--content,
+    .footer__region-3--content {
+        grid-column: 2 / 12;
+    }
+}

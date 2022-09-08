@@ -1,0 +1,39 @@
+.contact-us-block {
+  background-color: var(--light-grey);
+  padding: var(--gap-unit);
+  margin-bottom: var(--gap-unit);
+}
+
+/* Block Title */
+.contact-us-block h2 {
+  margin-bottom: var(--gap-unit);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Remove text decoration from links */
+.contact-us-block a[href*="@vpl.ca"],
+.contact-us-block a[href*="tel"]{
+  text-decoration: none;
+}
+
+/* Email Icon */
+.contact-us-block a[href*="@vpl.ca"]::before {
+  display: inline;
+  padding-right: 0.5rem;
+  font-family: "vpl-icons" !important;
+  content: '\44';
+  font-size: 1rem;
+  color: var(--dark-grey);
+}
+
+/* Phone Icon */
+.contact-us-block a[href*="tel"]::before {
+  display: inline;
+  padding-right: 0.5rem;
+  font-family: "vpl-icons" !important;
+  content: '\48';
+  font-size: 1rem;
+  color: var(--dark-grey);
+}

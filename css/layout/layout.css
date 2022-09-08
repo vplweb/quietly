@@ -1,0 +1,101 @@
+/* This stylesheet is for layouts up to 1024px */
+    
+/* Layout the regions in the <header> element */
+.region--header__region-1 {
+    grid-column: 1 / -1;
+}
+
+.header__region-2 {
+    grid-column: 2 / 8;
+    
+    display: grid;
+    /* grid-template-columns: repeat(12, 1fr); */
+    /* gap: var(--gap-unit); */
+}
+
+.region--header__region-3 {
+    grid-column: 8 / 14;
+}
+
+.region--header__region-4 {
+    grid-column: 2 / 14;
+}
+
+.header__region-5 {
+    grid-column: 1 / -1;
+}
+
+/* <main> element and its children */
+.main-layout {
+    grid-column: 2 / 14;
+   
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1em;
+
+    overflow: auto;
+}
+
+/* The <main element can contain asides. They are added to the HTML if they have content. If they don't then they are not added and the regions assume the width of columns that are available */
+/* Asides precede the main-layout area that contains the output of regions 1–3 */
+.main__aside-a {
+    grid-column: 2 / 14;
+    overflow: auto;
+}
+
+.main__aside-b {
+    grid-column: 2 / 14;
+    /* background-color: pink; */
+    order: 3;
+
+    overflow: auto;
+}
+
+/* Region position & widths: aside-a */
+.main__aside-a ~ .main-layout {
+    grid-column: 2 / 14;
+}
+
+/* Region position & widths: aside-b */
+.main__aside-b ~ .main-layout {
+    grid-column: 2 / 14;
+}
+
+/* Region position & widths: aside-a AND aside-b */
+.main__aside-a + .main__aside-b ~ .main-content {
+    grid-column: 2 / 14;
+}
+
+.footer__region-1 {
+    grid-column: 1 / -1;
+    background-color: var(--light-grey);
+    /* The .footer__region-1 element displays its content in a grid of 12 columns as well */
+    display: grid;
+    grid-template-columns: repeat(14, 1fr);
+    gap: 1em;
+}
+
+.footer__region-2 {
+    grid-column: 1 / -1;
+    background-color: var(--dark-grey);
+    /* The .footer__region-1 element displays its content in a grid of 12 columns as well */
+    display: grid;
+    grid-template-columns: repeat(14, 1fr);
+    gap: 1em;
+}
+
+.footer__region-3 {
+    grid-column: 1 / -1;
+    background-color: var(--very-dark-grey);
+    color: var(--grey);
+    /* The .footer__region-1 element displays its content in a grid of 12 columns as well */
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1em;
+}
+
+.footer__region-1--content,
+.footer__region-2--content,
+.footer__region-3--content {
+    grid-column: 2 / 14;
+}

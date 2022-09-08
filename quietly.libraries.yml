@@ -1,0 +1,21 @@
+global-everything:
+  # Uncomment next line to force Drupal to put our library files in the header of our pages
+  # header: true
+  # The next line defines the version of this library. Right now we are using VERSION. Don't know what this means, but it works
+  version: VERSION
+  css:
+    base:
+      # Always get the latest version of normalize.css via CDN per readme.md at https://github.com/necolas/normalize.css
+      'https://cdn.jsdelivr.net/npm/normalize.css': {external: true}
+    theme:
+      css/theme/quietly-main.css: {}
+  # Reference: https://www.drupal.org/node/2412769
+  js:
+    js/alerts.js: {}
+    js/script.js: {}
+    js/menu.js: {}
+
+digitallibrary:
+  # The next line declares the JavaScript file we are going to use. 
+    js:
+      js/digital-library.js: {}

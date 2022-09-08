@@ -1,0 +1,27 @@
+.person-node__position {
+  margin-bottom: 0.5rem;
+}
+
+.person-node__contact-info {
+  margin-bottom: 1rem;
+}
+
+.person-node__email::before {
+  display: inline-block;
+  font-family: 'vpl-icons';
+  content: '\44';
+}
+
+.person-node__phone::before {
+  display: inline-block;
+  font-family: 'vpl-icons';
+  content: '\48';
+}
+
+@media screen and (min-width:  64em) {
+  .person-node {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 1em;
+  }
+}

@@ -1,0 +1,21 @@
+.horizontal-image-callout-block {
+  margin-bottom: var(--gap-unit);
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+.horizontal-image-callout-block .image {
+  width: 100%;
+  grid-column: 1/2;
+}
+
+.horizontal-image-callout-block .image img {
+  width: 100%;
+  height: auto;
+}
+
+.horizontal-image-callout-block .content {
+  padding: calc(var(--gap-unit) * 2);
+  background-color: var(--light-grey);
+  grid-column: 2/5;
+}

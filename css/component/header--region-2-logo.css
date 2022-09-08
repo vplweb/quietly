@@ -1,0 +1,13 @@
+.logo-home {
+    grid-column: 1 / -1;
+    display: flex;
+    align-content: center;
+}
+.logo-normal {
+    width: 100%;
+}
+@media screen and (min-width:  57rem /* 1024px / 18px where 18px = 1rem */) {
+    .logo-normal {
+        width: 75%;
+    }
+}
