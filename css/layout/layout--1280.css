@@ -36,29 +36,25 @@
 
     .main-layout {
         grid-column: 2 / 14;
-        background-color: cornflowerblue;
 
         display: grid;
-        grid-template-columns: repeat(10, 1fr);
+        grid-template-columns: repeat(12, 1fr);
         gap: var(--gap-unit);
     }
 
     .main__aside-a {
         grid-column: 2 / 4;
-        background-color: coral;
 
         height: min-content;
     }
 
     .main__aside-b {
         grid-column: 12 / 14;
-        background-color: pink;
     }
 
     /* Region position & widths: aside-a; If the aside-a exists this will select the regions that follow in the HTML and position/size them */
     .main__aside-a ~ .main-layout {
         grid-column: 4 / 14;
-        background-color: cornflowerblue;
 
         display: grid;
         grid-template-columns: repeat(10, 1fr);
@@ -68,7 +64,6 @@
     /* Region position & widths: aside-b; If the aside-b exists this will select the regions that follow in the HTML and position/size them */
     .main__aside-b ~ .main-layout {
         grid-column: 2 / 12;
-        background-color: cornflowerblue;
 
         display: grid;
         grid-template-columns: repeat(10, 1fr);
@@ -78,7 +73,6 @@
     /* Region position & widths: aside-a AND aside-a; If the aside-a and aside-b both exist this will select the regions that follow in the HTML and position/size them */
     .main__aside-a + .main__aside-b ~ .main-layout {
         grid-column: 4 / 12;
-        background-color: cornflowerblue;
         
         display: grid;
         grid-template-columns: repeat(6, 1fr);

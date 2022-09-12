@@ -31,7 +31,7 @@
    
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    gap: 1em;
+    gap: calc(var(--gap-unit) / 2);
 
     overflow: auto;
 }
