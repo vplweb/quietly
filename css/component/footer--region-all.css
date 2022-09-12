@@ -5,6 +5,14 @@
   display: grid;
   grid-column: 1 / -1;
   grid-template-columns: repeat(14, 1fr);
-  column-gap: var(--gap-unit);
+  column-gap: calc(var(--gap-unit) / 2);
+}
+
+@media screen and (min-width: 57rem) {
+  .region--footer__region-1,
+  .region--footer__region-2,
+  .region--footer__region-3 {
+    column-gap: var(--gap-unit);
+  }
 }
 
