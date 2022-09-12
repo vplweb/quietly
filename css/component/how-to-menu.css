@@ -10,7 +10,7 @@
 
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  gap: var(--gap-unit);
+  gap: calc(var(--gap-unit) / 2);
   
   margin: 0;
   padding: 0;
@@ -24,11 +24,22 @@
   color: black;
 }
 
-@media screen and (min-width: 57rem) and (max-width: 70rem) {
+@media screen and (min-width: 57rem) {
+  .how-to-menu {
+    gap: var(--gap-unit);
+  }
+
+  .how-to-menu > .menu-item {
+    grid-column: span 4;
+    background-color: pink;
+  }
+}
+
+/* @media screen and (min-width: 57rem) and (max-width: 70rem) {
   .how-to-menu > .menu-item {
     grid-column: span 4;
   }
-}
+} */
 
 @media screen and (min-width: 71rem) {
   .how-to-menu > .menu-item {

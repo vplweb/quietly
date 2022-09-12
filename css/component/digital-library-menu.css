@@ -10,7 +10,7 @@
 
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  gap: var(--gap-unit);
+  gap: calc(var(--gap-unit) / 2);
 
   margin: 0;
   padding: 0;
@@ -21,11 +21,22 @@
   grid-column: span 6;
 }
 
-@media screen and (min-width: 57rem) and (max-width: 70rem) {
+@media screen and (min-width: 57rem) {
+  .digital-library-menu {
+    gap: var(--gap-unit);
+  }
+
+  .digital-library-menu > .menu-item {
+    grid-column: span 4;
+    background-color: aqua;
+  }
+}
+
+/* @media screen and (min-width: 57rem) and (max-width: 70rem) {
   .digital-library-menu > .menu-item {
     grid-column: span 4;
   }
-}
+} */
 
 @media screen and (min-width: 71rem) {
   .digital-library-menu > .menu-item {
